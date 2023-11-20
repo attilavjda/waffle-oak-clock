@@ -1,14 +1,13 @@
-from typing import List
-
 from datetime import time
+from typing import List
 
 
 def validate_time(user_time: List[int], random_time_values: time) -> str:
-    ''' Checks if user_time values are valid. '''
+    """Checks if user_time values are valid."""
 
     try:
         user_hour, user_minute, user_second = map(int, user_time.split(":"))
-    except ValueError: 
+    except ValueError:
         return "Invalid format (HH:MM:SS)"
 
     if not (0 <= user_hour < 24 and 0 <= user_minute < 60 and 0 <= user_second < 60):
