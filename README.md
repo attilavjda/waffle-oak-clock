@@ -24,7 +24,7 @@ The Waffle Oak Clock App is a Python application that leverages the Turtle graph
 1. Clone the repository:
 
 ```bash
-    git clone https://github.com/your-username/waffle-oak-clock.git
+git clone https://github.com/your-username/waffle-oak-clock.git
 ```
 
 2.Navigate to the project directory:
@@ -36,12 +36,12 @@ cd waffle-oak-clock
 3. Run the application:
 
 ```bash
-    python waffle_oak_clock.py
+python waffle_oak_clock.py
 ```
 
 ## Usage:
 
-    Upon running the application, you'll see an interactive window displaying the clock.
-    Use the provided buttons to validate the time, load the next clock, and toggle between light and dark themes.
-    Follow on-screen instructions for an engaging experience.
+Upon running the application, you'll see an interactive window displaying the clock.
+Use the provided buttons to validate the time, load the next clock, and toggle between light and dark themes.
+Follow on-screen instructions for an engaging experience.
     
