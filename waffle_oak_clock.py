@@ -29,7 +29,7 @@ def main(
     buttons_theme_text: List = ["☀️", "🌘"],
 ):
     def handle_validation() -> None:
-        """Updates validation_label text with result of validation."""
+        """ Updates validation_label text with result of validation. """
         user_time: str = input_field.get()
         print(user_time)
         message: str = validate_time(user_time, random_time_values)
@@ -37,9 +37,9 @@ def main(
 
     def load_next_clock() -> None:
         """
-        Clears the input field and validation message
-        Updates random_time variable with new time values
-        Changes direction of the hand turtles
+        Clears the input field and validation message.
+        Updates random_time variable with new time values.
+        Changes direction of the hand turtles.
         """
         nonlocal random_time_values
         input_field.delete(0, END)
@@ -56,7 +56,8 @@ def main(
         theme_button.config(text=buttons_theme_text[light_mode_on])
         light_mode_on = not light_mode_on
 
-    def create_turtle(hand):
+    def create_turtle(hand: ClockHands) -> RawTurtle:
+        ''' Creates a turtle with shape, color and size given in ClockHands of draw_clock.py. '''
         hand_turtle = RawTurtle(screen)
         hand_turtle.shape(hand.shape)
         hand_turtle.color(hand.color)
@@ -127,7 +128,7 @@ def main(
     clock_turtles = [hour_turtle, minute_turtle, second_turtle]
 
     def draw_markings() -> None:
-        """Draws the markings of the clock"""
+        """Draws the markings of the clock. """
         for minute in range(markings_number):
             angle = radians(minute * 360 / markings_number)
             x = markings_radius * sin(angle)
@@ -143,7 +144,7 @@ def main(
     def draw_hands(random_time_values: time) -> None:
         """
         Function for setting hands direction, the hands are actual turtles.
-        Updates hand turtle values
+        Updates hand turtle values.
         """
         clock_time_instance = ClockTime(
             random_time_values.hour,
